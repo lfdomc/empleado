@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+Lista de Empleados
+{% endblock title %}
+
+
+{% block content %}
+{% include 'includes/header.html' %}
+
+<div class="grid-container">
+     <div class="grid-x grid-margin-x">
+       <h1 class = "cell">Actualizar Empleado</h1>
+       <form class= "cell grid-x grid-margin-x" method="POST">{% csrf_token %}
+
+        {{form.as_p}}
+        <button type="submit" class="success button">Actualizar</button>
+    
+    </form>  
+   
+      <div class= "cell">  
+        
+       
+        
+
+{% endblock content %}

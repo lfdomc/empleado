@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}
+        Eliminar Empleado
+{% endblock title %}
+
+{% block content %}
+{% include 'includes/header.html' %}
+
+<div class="grid-container">
+     <div class="grid-x">
+       <h1 class = "cell">Eliminar Empleado </h1>
+        <h1></h1>
+       
+        <div class="callout">
+            <h5>Informacion de: {{empleado.first_name}} {{empleado.last_name}}</h5>
+            
+        <form  class="cell grid-x grid-margin-x"method="POST" >{% csrf_token %}
+           
+            <table>
+                <thead>
+                  <tr>
+                    <th width="150">ID</th>
+                    <th width="150">NOMBRES</th>
+                    <th width="150">APELLIDOS</th>
+                    <th width="300">DEPARTAMENTO</th>
+                    <th width="150">ACCION</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  <tr>
+                    <td>{{empleado.id}}</td>
+                    <td>{{empleado.first_name}}</td>
+                    <td>{{empleado.last_name}}</td>
+                    <td>{{empleado.departamento}}</td>
+                    <td><button type="submit"class="alert button">Borrar</button>          
+                  </tr> 
+                </tbody>
+              </table>
+
+    </div>    
+           
+    <div>       
+         
+    </div> 
+
+    </form>  
+
+      <div class= "cell">  
+        
+       
+        
+
+{% endblock content %}
+
